@@ -26,7 +26,7 @@ Serial::Serial(char *portName)
         }
         else
         {
-            printf("ERROR!!!");
+            printf("ERROR: Undefined critical failure.\n");
         }
     }
     else
@@ -58,7 +58,7 @@ Serial::Serial(char *portName)
                  // отлично! Мы успешно подлючились :)
                  this->connected = true;
                  //ждём пока Arduino перезагрузится
-                 Sleep(ARDUINO_WAIT_TIME);
+                 Sleep(ARDUINO_WAIT_TIME-10);
              }
         }
     }
